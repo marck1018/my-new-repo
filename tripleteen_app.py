@@ -4,7 +4,7 @@ import plotly.express as px
 
 car_data = pd.read_csv(r'vehicles.csv')  # lendo os dados
 
-st.header("Bem-vindo ao Meu Aplicativo!")# mostrando o cabeçalho
+st.header("APP de análise de dados web")# mostrando o cabeçalho
 
 hist_button = st.button('Criar histograma')  # criar um botão
 
@@ -18,8 +18,8 @@ if hist_button:  # se o botão for clicado
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
 
-disp_button = st.button('Criar dispersão')
-if disp_button:  # se o botão for clicado
+disp_box = st.checkbox('Criar dispersão')
+if disp_box:  # se o botão for clicado
     # escrever uma mensagem
     st.write('Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
 
@@ -28,6 +28,3 @@ if disp_button:  # se o botão for clicado
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
-
-###
-
