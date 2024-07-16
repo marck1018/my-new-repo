@@ -28,3 +28,16 @@ if disp_button:  # se o botão for clicado
 
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
+
+###
+    build_histogram = st.checkbox('Criar um histograma')
+
+if build_histogram: # se a caixa de seleção for selecionada
+  st.write('Criando um histograma para a coluna odometer')
+ # criar um histograma
+    fig = px.histogram(car_data, x="odometer")
+
+    # exibir um gráfico Plotly interativo
+    st.plotly_chart(fig, use_container_width=True)
+build_histogram = st.checkbox('Criar um histograma')
+
