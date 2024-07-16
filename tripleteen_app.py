@@ -2,7 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-car_data = pd.read_csv(r'C:\Users\diasn\OneDrive\Área de Trabalho\TRIPLETEN\atividades sprint 5\projeto sprint 05\tripleteen-work\notebooks\vehicles.csv')  # lendo os dados
+car_data = pd.read_csv(r'notebooks/vehicles.csv')  # lendo os dados
+
+st.header("Bem-vindo ao Meu Aplicativo!")# mostrando o cabeçalho
+
 hist_button = st.button('Criar histograma')  # criar um botão
 
 if hist_button:  # se o botão for clicado
